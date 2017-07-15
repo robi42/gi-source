@@ -1,6 +1,5 @@
 spring:
-  application:
-    name: gi-source
+  application.name: gi-source
   output.ansi.enabled: always
 
   jackson:
