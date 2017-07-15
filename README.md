@@ -5,7 +5,7 @@ with event publishing.
 
 ## Build
 
-    ./mvnw clean package
+    ./mvnw -T 1C -DskipTests clean package
 
 ## Run
 
