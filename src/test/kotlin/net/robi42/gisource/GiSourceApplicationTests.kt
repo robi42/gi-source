@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner
 @RunWith(SpringRunner::class)
 @SpringBootTest class GiSourceApplicationTests {
 
-	@Ignore("Requires running Redis/Kafka")
+    @Ignore("Requires running Redis/Kafka")
     @Test fun `context loads`() {}
 
 }
