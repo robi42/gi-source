@@ -5,6 +5,8 @@ import org.springframework.cloud.stream.messaging.Source
 import org.springframework.integration.annotation.InboundChannelAdapter
 import org.springframework.integration.annotation.Poller
 import java.lang.System.currentTimeMillis
+import java.time.Instant
+import java.time.Instant.now
 
 @EnableBinding(Source::class)
 class GreetingSource {
@@ -14,3 +16,8 @@ class GreetingSource {
     fun greet() = Greeting(text = "Hello world! The time is: ${currentTimeMillis()}")
 
 }
+
+data class Greeting(
+        val text: String,
+        val timestamp: Instant = now()
+)
