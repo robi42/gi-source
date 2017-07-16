@@ -14,7 +14,7 @@ spring:
       content-type: application/json
 
 server:
-  port: 8888
+  port: -1
 management:
   port: 8889
   context-path: /manage
