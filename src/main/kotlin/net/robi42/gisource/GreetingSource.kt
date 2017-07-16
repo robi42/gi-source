@@ -11,7 +11,7 @@ import java.time.Instant.now
 @EnableBinding(Source::class)
 class GreetingSource {
 
-    /** Publishes a greeting message event object every 2 seconds. */
+    /** Publishes a greeting message event object every 2 seconds (default: every second). */
     @InboundChannelAdapter(Source.OUTPUT, poller = arrayOf(Poller(fixedDelay = "2000")))
     fun greet() = Greeting(text = "Hello world! The time is: ${currentTimeMillis()}")
 
