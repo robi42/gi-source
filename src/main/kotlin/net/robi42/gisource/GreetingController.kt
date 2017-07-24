@@ -1,7 +1,7 @@
 package net.robi42.gisource
 
 import org.springframework.cloud.stream.messaging.Source
-import org.springframework.http.HttpStatus.CREATED
+import org.springframework.http.HttpStatus.ACCEPTED
 import org.springframework.messaging.support.GenericMessage
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -13,7 +13,7 @@ import java.nio.charset.StandardCharsets.UTF_8
 @RestController class GreetingController(private val source: Source) {
 
     @PostMapping
-    @ResponseStatus(CREATED)
+    @ResponseStatus(ACCEPTED)
     fun sendMessage(@RequestBody text: String) {
         val decodedText = decode(text, UTF_8.name())
         val greeting = Greeting(text = decodedText)
