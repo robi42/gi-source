@@ -1,5 +1,5 @@
 spring:
-  application.name: gisource-test
+  application.name: gi-source-test
   main.banner-mode: "off"
 
 management.port: -1
