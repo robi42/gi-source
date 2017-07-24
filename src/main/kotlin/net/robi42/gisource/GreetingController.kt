@@ -16,7 +16,6 @@ import java.nio.charset.StandardCharsets.UTF_8
     @ResponseStatus(ACCEPTED)
     fun sendMessage(@RequestBody text: String) {
         val greeting = Greeting(text = decode(text))
-
         output.send(GenericMessage(greeting))
     }
 
