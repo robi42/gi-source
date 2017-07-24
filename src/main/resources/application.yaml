@@ -10,6 +10,7 @@ spring:
 
   cloud.stream:
     bindings.output:
+      group: gi
       destination: greetings
       content-type: application/json
 
