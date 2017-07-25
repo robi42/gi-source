@@ -11,6 +11,12 @@ with event publishing.
 
     java -jar target/gi-source.jar
 
+## Usage
+
+Messages can also be created manually, for instance:
+
+    curl -i localhost:8888 -d 'Hi'
+
 ## Prerequisites
 
  * JDK 8 ([Oracle download](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html))
